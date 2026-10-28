@@ -11,6 +11,14 @@
     />
     <meta name="theme-color" content="#0F141C" />
     
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:title" content="Ravi Mobile | Spares, Batteries & Precision Repairs — Shahada" />
+    <meta property="og:description" content="Verified display assemblies, pure cobalt batteries, fast chargers, and precision hardware repairs in Shahada, District Nandurbar. Direct counter quotations on WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+
     <!-- Typography: Space Grotesk (Latin Headlines), Mukta (Devanagari Marathi/Hindi), Inter (Body), JetBrains Mono (Specs) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +26,39 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Mukta:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- LocalBusiness Schema.org JSON-LD for Shahada Google Search Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ElectronicsStore",
+      "name": "Ravi Mobile",
+      "description": "Mobile spare parts, pure cobalt batteries, fast chargers, and component-level repairs in Shahada, Maharashtra.",
+      "telephone": "+919800000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. 12, Market Yard Road, Near Old Bus Stand",
+        "addressLocality": "Shahada",
+        "addressRegion": "Maharashtra",
+        "postalCode": "425409",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 21.5434,
+        "longitude": 74.4754
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "09:30",
+        "closes": "21:00"
+      },
+      "priceRange": "₹₹"
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

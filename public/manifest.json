@@ -1,0 +1,18 @@
+{
+  "name": "Ravi Mobile — Spares & Repairs",
+  "short_name": "Ravi Mobile",
+  "description": "Mobile accessories, batteries, spare parts, and precision repair services in Shahada, Maharashtra.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F141C",
+  "theme_color": "#0F141C",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
