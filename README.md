@@ -1,4 +1,4 @@
-# Ravi Mobile Digital Experience (RMDX)
+# Ravi Mobile
 
 > **Next-Generation Digital Storefront & Precision Workshop Portal**  
 > Location: Shahada, District Nandurbar, Maharashtra, India  
