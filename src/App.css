@@ -1,5 +1,6 @@
 /**
- * RAVI MOBILE — ROOT APP SCAFFOLD STYLES
+ * RAVI MOBILE — MAIN APPLICATION STYLES
+ * Creative Direction: Precision Workshop + Modern Bazaar Warmth (Hybrid Alternate C)
  */
 
 .app-wrapper {
@@ -10,14 +11,16 @@
   background-color: var(--surface-base);
 }
 
-/* Header Scaffolding */
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
-  background: rgba(15, 20, 28, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  z-index: 100;
+  background: rgba(15, 20, 28, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -36,11 +39,11 @@
 }
 
 .brand-icon {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius-sm);
-  background: var(--surface-subtle);
-  border: 1px solid var(--accent-cyan);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-cyan);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,10 +69,38 @@
   text-transform: uppercase;
 }
 
+/* Desktop Navigation Links */
+.desktop-nav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: block;
+  }
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
 .header-right {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .header-right {
+    gap: var(--space-4);
+  }
 }
 
 .lang-indicator {
@@ -99,11 +130,70 @@
   font-weight: 600;
 }
 
-/* Baseline Hero Scaffolding (Hybrid Alternate C) */
-.hero-baseline {
-  padding: var(--space-16) 0;
+.header-cta-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-cta-desktop {
+    display: inline-flex;
+  }
+}
+
+.mobile-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+/* Mobile Drawer Overlay */
+.mobile-drawer {
+  background: rgba(15, 20, 28, 0.98);
+  border-bottom: 1px solid var(--border-medium);
+  padding: var(--space-6) 0 var(--space-8) 0;
+  box-shadow: var(--shadow-lg);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.mobile-nav-links a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  padding: var(--space-2) 0;
   border-bottom: 1px solid var(--border-subtle);
-  background: radial-gradient(circle at 80% 20%, rgba(0, 210, 255, 0.05) 0%, transparent 60%);
+}
+
+/* ==========================================================================
+   Hero Section — Alternative A (Precision Workshop)
+   ========================================================================== */
+.hero-baseline {
+  padding: var(--space-12) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at 85% 15%, rgba(0, 210, 255, 0.06) 0%, transparent 60%);
+}
+
+@media (min-width: 1024px) {
+  .hero-baseline {
+    padding: var(--space-20) 0;
+  }
 }
 
 .hero-grid {
@@ -115,7 +205,7 @@
 
 @media (min-width: 1024px) {
   .hero-grid {
-    grid-template-columns: 1.25fr 0.9fr;
+    grid-template-columns: 1.2fr 0.95fr;
     gap: var(--space-12);
   }
 }
@@ -125,7 +215,7 @@
 }
 
 .hero-heading {
-  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-size: clamp(2.1rem, 5vw, 3.8rem);
   line-height: 1.1;
   letter-spacing: -0.03em;
   color: var(--text-primary);
@@ -253,7 +343,9 @@
   color: var(--accent-cyan);
 }
 
-/* Section 1 Transition: Warm Ivory Surface (Modern Bazaar) */
+/* ==========================================================================
+   Section 1: Quick Problem Selector — Warm Ivory Surface Transition
+   ========================================================================== */
 .problem-selector-section {
   background-color: var(--surface-light);
   color: var(--text-light-primary);
@@ -268,7 +360,7 @@
 
 .section-head h2 {
   color: var(--text-light-primary);
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
   letter-spacing: -0.02em;
   margin-bottom: var(--space-3);
 }
@@ -315,7 +407,7 @@
 }
 
 .tile-icon {
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   margin-bottom: var(--space-3);
 }
 
@@ -347,7 +439,622 @@
   color: var(--action-whatsapp);
 }
 
-/* Mobile Persistent Bottom Bar */
+/* ==========================================================================
+   Section 2: Products Showcase (Dark Technical Surface)
+   ========================================================================== */
+.products-section {
+  padding: var(--space-16) 0;
+  background-color: var(--surface-base);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.section-head-dark {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--space-8) auto;
+}
+
+.section-title-dark {
+  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.section-desc-dark {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.category-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-8);
+  scrollbar-width: none;
+}
+
+@media (min-width: 768px) {
+  .category-filter-bar {
+    justify-content: center;
+  }
+}
+
+.cat-pill {
+  min-height: 40px;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.cat-pill.active {
+  background: var(--accent-cyan-subtle);
+  color: var(--accent-cyan);
+  border-color: var(--border-cyan);
+  font-weight: 600;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.product-card:hover {
+  border-color: var(--border-cyan);
+  box-shadow: var(--shadow-md);
+}
+
+.product-sku {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.product-title {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin: var(--space-3) 0 var(--space-2) 0;
+  line-height: 1.3;
+}
+
+.product-compat-box {
+  background: var(--surface-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.8rem;
+  margin-bottom: var(--space-4);
+}
+
+.compat-label {
+  display: block;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.compat-text {
+  color: var(--accent-cyan);
+  font-weight: 500;
+}
+
+.specs-list {
+  margin-bottom: var(--space-4);
+}
+
+.specs-head {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.spec-bullet {
+  display: flex;
+  gap: var(--space-2);
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.bullet-cyan {
+  color: var(--accent-cyan);
+  font-weight: bold;
+}
+
+.product-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.775rem;
+}
+
+.stock-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #22C55E;
+  font-weight: 500;
+}
+
+.stock-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22C55E;
+}
+
+.price-note {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   Section 3: Repair Diagnostic Matrix
+   ========================================================================== */
+.repairs-section {
+  padding: var(--space-16) 0;
+  background-color: var(--surface-base);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 640px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.process-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  position: relative;
+}
+
+.process-step-num {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.process-title {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.process-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.service-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.service-title {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-top: var(--space-2);
+}
+
+.turnaround-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--accent-amber-subtle);
+  color: var(--accent-amber);
+  border: 1px solid rgba(255, 159, 28, 0.3);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  white-space: nowrap;
+}
+
+.service-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.service-highlights {
+  margin-bottom: var(--space-4);
+}
+
+.service-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.check-icon {
+  color: #22C55E;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Section 4: Wholesale Technician Desk
+   ========================================================================== */
+.wholesale-section {
+  padding: var(--space-16) 0;
+  background-color: var(--surface-base);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.wholesale-box {
+  background: linear-gradient(135deg, rgba(22, 29, 42, 0.95), rgba(15, 20, 28, 0.98));
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 1024px) {
+  .wholesale-box {
+    padding: var(--space-12);
+  }
+}
+
+.wholesale-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .wholesale-grid {
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+}
+
+.wholesale-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+
+.wholesale-desc {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-6);
+}
+
+.wholesale-advantages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.advantage-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+}
+
+.advantage-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.wholesale-form-card {
+  background: var(--surface-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.form-title {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+}
+
+/* ==========================================================================
+   Section 5: Shop Location & Directions (Warm Light Surface)
+   ========================================================================== */
+.location-section {
+  padding: var(--space-16) 0;
+  background-color: var(--surface-light);
+  color: var(--text-light-primary);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .location-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.location-detail-card,
+.location-hours-card {
+  background: var(--surface-light-card);
+  border: 1px solid var(--surface-light-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-light-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.location-icon-box {
+  font-size: 2rem;
+  margin-bottom: var(--space-4);
+}
+
+.location-subhead {
+  color: var(--text-light-primary);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-2);
+}
+
+.location-address {
+  font-style: normal;
+  color: var(--text-light-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+}
+
+.location-landmark {
+  font-size: 0.875rem;
+  color: var(--text-light-muted);
+  font-family: var(--font-mono);
+}
+
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.hours-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-light-primary);
+}
+
+.visit-note {
+  font-size: 0.875rem;
+  color: var(--text-light-secondary);
+  line-height: 1.5;
+  margin-top: var(--space-4);
+}
+
+/* ==========================================================================
+   Section 6: Footer
+   ========================================================================== */
+.site-footer {
+  background-color: #0A0D13;
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-16) 0 var(--space-8) 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-12);
+  }
+}
+
+.footer-brand-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: block;
+}
+
+.footer-brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+}
+
+.footer-desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: var(--space-3) 0 var(--space-4) 0;
+  max-width: 540px;
+}
+
+.footer-towns {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  color: var(--accent-gold);
+}
+
+.footer-head {
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin-bottom: var(--space-4);
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-links-list a {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer-links-list a:hover {
+  color: var(--accent-cyan);
+}
+
+.footer-notice-box {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--space-6);
+}
+
+.footer-bottom-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 768px) {
+  .footer-bottom-bar {
+    flex-direction: row;
+  }
+}
+
+/* ==========================================================================
+   Mobile Persistent Dock (Thumb Zone)
+   ========================================================================== */
 .mobile-sticky-dock {
   display: none;
 }
@@ -355,7 +1062,7 @@
 @media (max-width: 767px) {
   .mobile-sticky-dock {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.6fr;
     gap: var(--space-2);
     position: fixed;
     bottom: 0;
@@ -365,8 +1072,8 @@
     padding: var(--space-2) var(--space-3);
     padding-bottom: max(var(--space-2), env(safe-area-inset-bottom));
     background: rgba(15, 20, 28, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-top: 1px solid var(--border-medium);
   }
 }
