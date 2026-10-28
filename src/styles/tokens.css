@@ -1,0 +1,115 @@
+/**
+ * RAVI MOBILE — DESIGN SYSTEM TOKENS
+ * Creative Direction: Precision Workshop + Modern Bazaar Warmth
+ * Location Focus: Shahada, Maharashtra
+ */
+
+:root {
+  /* ==========================================================================
+     Surfaces & Backgrounds
+     ========================================================================== */
+  --surface-base: #0F141C;           /* Precision Workshop dark graphite canvas */
+  --surface-elevated: #161D2A;       /* Elevated cards, headers, interactive panels */
+  --surface-elevated-hover: #1E2738; /* Card hover state */
+  --surface-subtle: #1F2839;         /* Dividers, borders, nested panels */
+  --surface-highlight: #28344B;      /* Active state highlights */
+
+  /* Modern Bazaar Warmth Transition Surfaces */
+  --surface-light: #F4F6F9;          /* Warm light surface for Problem Selector */
+  --surface-light-card: #FFFFFF;     /* Pure white cards on light surfaces */
+  --surface-light-border: #E2E8F0;   /* Light border for contrast */
+  --surface-light-hover: #F8FAFC;
+
+  /* ==========================================================================
+     Typography & Text Roles
+     ========================================================================== */
+  --font-display: 'Space Grotesk', 'Mukta', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', 'Mukta', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Monaco, monospace;
+  --font-devanagari: 'Mukta', system-ui, -apple-system, sans-serif;
+
+  /* Text Colors on Dark Surfaces */
+  --text-primary: #FFFFFF;           /* Crisp headlines */
+  --text-secondary: #94A3B8;         /* Subtitles & explanations */
+  --text-muted: #64748B;             /* Technical specs, metadata, labels */
+  --text-inverse: #0F141C;           /* Text on light button backgrounds */
+
+  /* Text Colors on Light Surfaces (Modern Bazaar) */
+  --text-light-primary: #0F172A;     /* Primary text on warm ivory surfaces */
+  --text-light-secondary: #475569;   /* Body text on light surfaces */
+  --text-light-muted: #64748B;       /* Captions on light surfaces */
+
+  /* ==========================================================================
+     Brand Actions & Technical Accents
+     ========================================================================== */
+  /* WhatsApp Conversion Engine (High-contrast emerald) */
+  --action-whatsapp: #16A34A;
+  --action-whatsapp-hover: #15803D;
+  --action-whatsapp-active: #166534;
+  --action-whatsapp-subtle: rgba(22, 163, 74, 0.15);
+
+  /* Precision Electric Cyan (Technical lines, chips & active focus) */
+  --accent-cyan: #00D2FF;
+  --accent-cyan-subtle: rgba(0, 210, 255, 0.12);
+  --accent-cyan-glow: 0 0 20px rgba(0, 210, 255, 0.25);
+
+  /* Diagnostic Amber (Repair turnaround, battery health, alerts) */
+  --accent-amber: #FF9F1C;
+  --accent-amber-subtle: rgba(255, 159, 28, 0.15);
+
+  /* Modern Bazaar Warm Gold (Technician wholesale partner tier) */
+  --accent-gold: #E58A13;
+  --accent-gold-subtle: rgba(229, 138, 19, 0.15);
+
+  /* Call / Tel Action */
+  --action-phone: #334155;
+  --action-phone-hover: #475569;
+
+  /* ==========================================================================
+     Borders & Radii
+     ========================================================================== */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-cyan: rgba(0, 210, 255, 0.35);
+
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* ==========================================================================
+     Spacing Scale
+     ========================================================================== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Layout Widths */
+  --container-max: 1240px;
+  --container-narrow: 960px;
+  --gutter-desktop: 32px;
+  --gutter-mobile: 16px;
+
+  /* ==========================================================================
+     Shadows & Elevations
+     ========================================================================== */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.45);
+  --shadow-light-card: 0 4px 14px rgba(15, 23, 42, 0.06);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
