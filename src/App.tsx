@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ProblemSelector } from './components/ProblemSelector';
 import { ProductCatalog } from './components/ProductCatalog';
+import { RepairEstimator } from './components/RepairEstimator';
 import { RepairMatrix } from './components/RepairMatrix';
 import { WholesaleDesk } from './components/WholesaleDesk';
 import { LocationCard } from './components/LocationCard';
@@ -67,10 +68,13 @@ export default function App() {
         {/* 3. Section 1: Quick Problem Selector — Alternative B (Warm Ivory Surface) */}
         <ProblemSelector currentLang={currentLang} />
 
-        {/* 4. Section 2: Hardware Spares & Fast Chargers Showcase */}
-        <ProductCatalog currentLang={currentLang} />
+        {/* 4. Section 2: Hardware Spares & Fast Chargers Showcase with Live Search */}
+        <ProductCatalog currentLang={currentLang} onOpenEnquiry={handleOpenModal} />
 
-        {/* 5. Section 3: Precision Repair & Component Diagnostics */}
+        {/* 5. Section 3: Interactive Smartphone Repair Cost Estimator */}
+        <RepairEstimator currentLang={currentLang} />
+
+        {/* 6. Section 4: Precision Repair & Component Diagnostics */}
         <RepairMatrix currentLang={currentLang} />
 
         {/* 6. Section 4: Wholesale & Technician Partner Desk */}

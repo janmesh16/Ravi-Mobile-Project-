@@ -35,6 +35,43 @@ describe('ProductCatalog Component', () => {
     expect(screen.getByText('Universal Diamond Grade Display Assembly')).toBeInTheDocument();
   });
 
+  it('should filter items when search input is used', () => {
+    render(<ProductCatalog currentLang="en" />);
+
+    const searchInput = screen.getByLabelText('Search Spares & Accessories');
+    fireEvent.change(searchInput, { target: { value: 'iPhone' } });
+
+    // iPhone display should be visible
+    expect(screen.getByText('Retina High-Luminance Display Assembly')).toBeInTheDocument();
+
+    // Redmi display should be filtered out
+    expect(screen.queryByText('Universal Diamond Grade Display Assembly')).not.toBeInTheDocument();
+  });
+
+  it('should filter items when brand pills are clicked', () => {
+    render(<ProductCatalog currentLang="en" />);
+
+    const samsungPill = screen.getByRole('button', { name: 'Samsung' });
+    fireEvent.click(samsungPill);
+
+    // Samsung items should be present
+    expect(screen.getByText('OLED / AMOLED High-Contrast Display Assembly')).toBeInTheDocument();
+    expect(screen.getByText('Pure Cobalt High-Capacity Battery Pack')).toBeInTheDocument();
+
+    // iPhone item should be absent
+    expect(screen.queryByText('Retina High-Luminance Display Assembly')).not.toBeInTheDocument();
+  });
+
+  it('should show fallback message when no search results match', () => {
+    render(<ProductCatalog currentLang="en" />);
+
+    const searchInput = screen.getByLabelText('Search Spares & Accessories');
+    fireEvent.change(searchInput, { target: { value: 'NonExistentModel9999' } });
+
+    expect(screen.getByText('No exact match found in quick catalog for this query.')).toBeInTheDocument();
+    expect(screen.getByText('Request Custom Part on WhatsApp')).toBeInTheDocument();
+  });
+
   it('should display in-stock status and compatibility on cards', () => {
     render(<ProductCatalog currentLang="en" />);
 

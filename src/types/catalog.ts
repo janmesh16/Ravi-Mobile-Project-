@@ -11,6 +11,7 @@ export interface ProductItem {
   sku: string;
   name: string;
   category: ProductCategory;
+  brand?: 'apple' | 'samsung' | 'xiaomi' | 'realme' | 'vivo' | 'oneplus' | 'universal';
   badge?: string;
   modelCompatibility: string;
   specs: string[];

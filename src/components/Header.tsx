@@ -52,6 +52,7 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, o
           <ul className="nav-list" style={{ display: 'flex', gap: 'var(--space-6)', listStyle: 'none' }}>
             <li><a href="#quick-problems" className="nav-link">{t.problemHeading.split('?')[0]}</a></li>
             <li><a href="#products" className="nav-link">{t.navProducts}</a></li>
+            <li><a href="#estimator" className="nav-link">{t.estimatorBadge}</a></li>
             <li><a href="#repairs" className="nav-link">{t.navRepairs}</a></li>
             <li><a href="#wholesale" className="nav-link">{t.navWholesale}</a></li>
             <li><a href="#location" className="nav-link">{t.navLocation}</a></li>
@@ -140,6 +141,7 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, o
             <ul className="mobile-nav-links">
               <li><a href="#quick-problems" onClick={closeMenu}>{t.problemHeading.split('?')[0]}</a></li>
               <li><a href="#products" onClick={closeMenu}>{t.navProducts}</a></li>
+              <li><a href="#estimator" onClick={closeMenu}>{t.estimatorBadge}</a></li>
               <li><a href="#repairs" onClick={closeMenu}>{t.navRepairs}</a></li>
               <li><a href="#wholesale" onClick={closeMenu}>{t.navWholesale}</a></li>
               <li><a href="#location" onClick={closeMenu}>{t.navLocation}</a></li>

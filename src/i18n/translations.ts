@@ -41,7 +41,7 @@ export interface TranslationDictionary {
   problemWholesaleDesc: string;
   problemWholesaleAction: string;
 
-  // Product Showcase
+  // Product Showcase & Search Filter
   catalogBadge: string;
   catalogTitle: string;
   catalogSubtitle: string;
@@ -50,9 +50,48 @@ export interface TranslationDictionary {
   catBatteries: string;
   catChargers: string;
   catAccessories: string;
+  catalogSearchPlaceholder: string;
+  catalogSearchLabel: string;
+  catalogAllBrands: string;
+  catalogResultsCount: string;
+  catalogNoResults: string;
+  catalogRequestPartBtn: string;
+  catalogClearSearch: string;
   compatibleModels: string;
   specLabel: string;
   enquirePriceBtn: string;
+
+  // Interactive Repair Cost Estimator
+  estimatorBadge: string;
+  estimatorTitle: string;
+  estimatorSubtitle: string;
+  estimatorStep1Brand: string;
+  estimatorStep2Issue: string;
+  estimatorStep3Grade: string;
+  estimatorEstimateTitle: string;
+  estimatorEstimatedRange: string;
+  estimatorTurnaroundLabel: string;
+  estimatorWarrantyLabel: string;
+  estimatorPerk1: string;
+  estimatorPerk2: string;
+  estimatorPerk3: string;
+  estimatorBookWhatsAppBtn: string;
+  estimatorCallCounterBtn: string;
+  estimatorDisclaimer: string;
+
+  // Estimator issues
+  issueScreen: string;
+  issueBattery: string;
+  issueCharging: string;
+  issueWater: string;
+  issueCamera: string;
+  issueBoard: string;
+
+  // Estimator grades
+  gradeOriginal: string;
+  gradeOriginalDesc: string;
+  gradeDiamond: string;
+  gradeDiamondDesc: string;
 
   // Repair Services
   repairBadge: string;
@@ -139,59 +178,97 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
     problemChargingDesc: 'Cable is loose, fast charging not detected, mic not working during calls.',
     problemChargingAction: 'Diagnose Port Fix →',
     problemWholesaleTitle: 'Technician Wholesale',
-    problemWholesaleDesc: 'Box lot folders, tested battery packs, and sub-boards for repair shops.',
-    problemWholesaleAction: 'Get Wholesale Rates →',
+    problemWholesaleDesc: 'Direct wholesale rates on tested folders and cells for repair shops.',
+    problemWholesaleAction: 'Get Technician Pricing →',
 
-    catalogBadge: 'Hardware Catalogue',
+    catalogBadge: 'Hardware Inventory',
     catalogTitle: 'Featured Spares & Accessories',
     catalogSubtitle:
-      'Fast-moving display folders, replacement batteries, and GaN fast chargers available at our Shahada counter.',
+      'Counter-tested smartphone display folders, high-capacity cobalt batteries, and fast chargers available for immediate pickup in Shahada.',
     catAll: 'All Items',
-    catDisplays: 'Display Assemblies',
+    catDisplays: 'Folder Displays',
     catBatteries: 'Mobile Batteries',
     catChargers: 'Fast Chargers',
-    catAccessories: 'Protection & Cables',
-    compatibleModels: 'Compatible Models:',
-    specLabel: 'Verified Specs:',
-    enquirePriceBtn: 'Enquire Price on WhatsApp',
+    catAccessories: 'Cables & Tools',
+    catalogSearchPlaceholder: 'Search model (e.g. Note 10, M31, iPhone), part name, or SKU...',
+    catalogSearchLabel: 'Search Spares & Accessories',
+    catalogAllBrands: 'All Brands',
+    catalogResultsCount: 'Showing verified parts',
+    catalogNoResults: 'No exact match found in quick catalog for this query.',
+    catalogRequestPartBtn: 'Request Custom Part on WhatsApp',
+    catalogClearSearch: 'Clear search',
+    compatibleModels: 'Compatibility:',
+    specLabel: 'Verified Quality Highlights:',
+    enquirePriceBtn: "Enquire Today's Price",
+
+    estimatorBadge: 'Instant Repair Calculator',
+    estimatorTitle: 'Interactive Smartphone Repair Cost Estimator',
+    estimatorSubtitle:
+      'Select your smartphone brand, hardware issue, and quality grade for an immediate counter pricing estimate and turnaround slot in Shahada.',
+    estimatorStep1Brand: '1. Select Smartphone Brand',
+    estimatorStep2Issue: '2. Select Hardware Issue / Component',
+    estimatorStep3Grade: '3. Select Quality Grade',
+    estimatorEstimateTitle: 'Diagnostic Workshop Estimate',
+    estimatorEstimatedRange: 'Estimated Counter Price Range',
+    estimatorTurnaroundLabel: 'Turnaround Time',
+    estimatorWarrantyLabel: 'Warranty Included',
+    estimatorPerk1: 'Zero diagnostic inspection charge on counter examination',
+    estimatorPerk2: 'Data Safe Guarantee — zero formatting of customer photos & contacts',
+    estimatorPerk3: '12-point hardware bench testing before counter handoff',
+    estimatorBookWhatsAppBtn: 'Book Repair Slot on WhatsApp',
+    estimatorCallCounterBtn: 'Call Workshop Counter',
+    estimatorDisclaimer:
+      '*Final counter quotation depends on physical motherboard condition and exact model sub-revision upon bench inspection.',
+
+    issueScreen: 'Display & Touch Screen (Cracked/Lines)',
+    issueBattery: 'Battery Drain & Swelling Replacement',
+    issueCharging: 'Charging Jack / Sub-Board / Mic',
+    issueWater: 'Water Damage Ultrasonic Cleaning',
+    issueCamera: 'Camera Lens / Back Glass Housing',
+    issueBoard: 'Dead Phone / Motherboard Short Circuit',
+
+    gradeOriginal: 'OEM / Original Service Grade',
+    gradeOriginalDesc: 'Factory IC, true-color AMOLED/LCD, 90-day counter replacement warranty.',
+    gradeDiamond: 'Diamond Tested Grade',
+    gradeDiamondDesc: 'High-quality pre-tested aftermarket folder/battery, 30-day testing warranty.',
 
     repairBadge: 'Component Lab',
-    repairTitle: 'Precision Repair & Diagnostics',
+    repairTitle: 'Precision Diagnostics & Clean Fitting Procedure',
     repairSubtitle:
-      'Professional hardware diagnosis, clean frame gluing, and micro-soldering performed with transparent timelines.',
+      'We combine micro-soldering, dust-free frame pasting, and component testing to deliver reliable hardware repairs right in Shahada.',
     step1Title: '01. Diagnostic Inspection',
-    step1Desc: 'DC power supply test & multimeter check to isolate short circuits.',
-    step2Title: '02. Precision Fitting',
-    step2Desc: 'Dust-free frame cleaning, original adhesive strip placement & clamp curing.',
-    step3Title: '03. Sensor & Touch Verification',
-    step3Desc: 'Rigorous multi-touch latency check, light sensor & earpiece test.',
-    step4Title: '04. Counter Handover',
-    step4Desc: 'Customer verifies touch smoothness and clarity on counter before final payment.',
-    estTimeLabel: 'Estimated Turnaround:',
-    enquireRepairBtn: 'Book Diagnostic on WhatsApp',
+    step1Desc: 'DC power supply test and digital multimeter check to pinpoint the exact failure.',
+    step2Title: '02. Precision Assembly',
+    step2Desc: 'Ultrasonic frame cleanout, OEM-grade sealant, and regulated thermal curing.',
+    step3Title: '03. Sensor & Touch Bench Test',
+    step3Desc: 'Multi-touch matrix test, ambient light sensor check, and microphone clarity test.',
+    step4Title: '04. Counter Handoff',
+    step4Desc: 'Full customer inspection and testing before accepting payment at our shop.',
+    estTimeLabel: 'Typical Turnaround:',
+    enquireRepairBtn: 'Enquire for My Model',
 
-    wholesaleBadge: 'Technician & Workshop Portal',
-    wholesaleTitle: 'Wholesale Supply for Repair Workshops',
+    wholesaleBadge: 'Technician Desk',
+    wholesaleTitle: 'Wholesale Hardware Supply for Local Technicians',
     wholesaleSubtitle:
-      'Partner with Ravi Mobile for reliable counter stock and bulk parcel supply across Shahada, Taloda, Shirpur, Dhadgaon, and Nandurbar.',
-    wholesaleAdvantage1: 'Pre-tested counter stock with verified IC chipsets to minimize returns.',
-    wholesaleAdvantage2: 'Dedicated technician discount price tier for regular repair shops.',
-    wholesaleAdvantage3: 'Same-day counter pickup and daily bus-parcel dispatch to neighboring towns.',
-    wholesaleAdvantage4: 'Direct WhatsApp support for immediate stock inquiries and part reservation.',
+      'Supplying repair shops and freelance technicians across Shahada, Taloda, Shirpur, Dhadgaon, and Nandurbar with pre-tested spares.',
+    wholesaleAdvantage1: 'Pre-tested folder displays and batteries to reduce customer return hassles.',
+    wholesaleAdvantage2: 'Volume discount tiers for recurring smartphone technicians and mechanics.',
+    wholesaleAdvantage3: 'Same-day counter dispatch in Shahada and regional bus-parcel dispatch.',
+    wholesaleAdvantage4: 'Direct WhatsApp communication with our workshop technician team.',
     wholesaleFormTitle: 'Request Technician Wholesale Rate-Card',
-    fieldShopName: 'Workshop / Shop Name',
-    fieldTown: 'Your Town / City (e.g. Taloda, Shirpur)',
-    fieldPartsNeeded: 'Required Parts & Quantities (e.g. 5x Note 10 Displays, 3x M31 Batteries)',
-    btnSendWholesale: 'Send Wholesale Request to WhatsApp',
+    fieldShopName: 'Your Repair Shop / Workshop Name',
+    fieldTown: 'City / Town (e.g. Taloda, Shirpur, Dhadgaon)',
+    fieldPartsNeeded: 'Required Parts & Quantities (e.g. 5x Note 10 Folders, 3x M31 Batteries)',
+    btnSendWholesale: 'Send Wholesale Enquiry on WhatsApp',
 
-    locationBadge: 'Counter Visit',
-    locationTitle: 'Visit Our Shahada Counter',
+    locationBadge: 'Workshop Counter',
+    locationTitle: 'Visit Our Physical Counter in Shahada',
     locationSubtitle:
-      'Conveniently located on Market Yard Road near Old Bus Stand. Walk in to inspect spares in person or discuss repair diagnostics.',
-    counterAddressHeading: 'Shop Counter Address',
+      'Conveniently located on Market Yard Road near the Old Bus Stand. Walk in for fast diagnosis or component collection.',
+    counterAddressHeading: 'Physical Shop Address',
     timingsHeading: 'Operating Hours',
-    openGoogleMapsBtn: 'Open in Google Maps',
-    callCounterBtn: 'Call Shop Counter',
+    openGoogleMapsBtn: 'Get Directions on Google Maps',
+    callCounterBtn: 'Call Counter Now',
 
     footerNotice:
       'Notice: Ravi Mobile operates an enquiry-first counter. All prices and stock availability are confirmed directly on WhatsApp or at our Shahada shop. We do not accept online payments or card checkouts on this website.',
@@ -213,89 +290,127 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
     heroTitleLine1: 'मोबाईल हार्डवेअर.',
     heroTitleLine2: 'अचूक व खात्रीशीर काम.',
     heroSubtitle:
-      'शहाद्यात टेस्ट केलेले डिस्प्ले फोल्डर्स, प्युअर कोबाल्ट बॅटऱ्या आणि चिप-लेव्हल रिपेअरिंग. थेट काउंटरवर खात्रीशीर भाव मिळवा.',
-    heroCtaWhatsApp: 'व्हॉट्सअ‍ॅपवर भाव विचारा',
+      'शहाद्यात तपासलेले डिस्प्ले फोल्डर्स, ओरिजिनल कोबाल्ट बॅटऱ्या आणि चिप-लेव्हल रिपेअरिंग. थेट काउंटर दर आणि कोणतीही छुपी फी नाही.',
+    heroCtaWhatsApp: 'व्हॉट्सअ‍ॅपवर दर विचारा',
     heroCtaExplore: 'समस्या निवडा',
-    heroSpecDisplays: 'बेंचवर टेस्ट केलेले डिस्प्ले',
-    heroSpecBatteries: 'ड्युअल-IC सेफ बॅटऱ्या',
+    heroSpecDisplays: 'बेंच-टेस्टेड डिस्प्ले',
+    heroSpecBatteries: 'सुरक्षित ड्युअल-IC बॅटरी',
     heroSpecWholesale: 'टेक्निशियन होलसेल दर',
-    heroBenchTitle: 'हार्डवेअर क्वालिटी व काउंटर स्टेटस',
-    heroCounterOpen: 'दुकान सुरू आहे',
-    heroBenchVisualTitle: 'डिस्प्ले व पॉवर तपासणी',
-    heroBenchVisualDesc: 'फ्रेम फिटिंग • 90Hz स्मूथ टच • प्युअर कोबाल्ट बॅटरी सेल',
+    heroBenchTitle: 'हार्डवेअर गुणवत्ता व काउंटर स्थिती',
+    heroCounterOpen: 'काउंटर सुरू आहे',
+    heroBenchVisualTitle: 'डिस्प्ले व पॉवर टेस्टिंग',
+    heroBenchVisualDesc: 'फ्रेम अलाइनमेंट • ९०Hz स्मूथ टच • शुद्ध कोबाल्ट सेल',
     heroBenchTurnaround: '३० ते ४५ मिनिटे',
-    heroBenchSupply: 'होलसेल बॉक्स रेट उपलब्ध',
+    heroBenchSupply: 'होलसेल बॉक्स दर उपलब्ध',
 
-    problemHeading: 'आज आपल्याला कशाची मदत हवी आहे?',
-    problemSubheading: 'आपल्या फोनची समस्या निवडून थेट व्हॉट्सअ‍ॅपवर उपलब्ध माल व किंमत विचारा:',
+    problemHeading: 'आज तुम्हाला कशात मदत हवी आहे?',
+    problemSubheading: 'मोबाईलमधील समस्या निवडा आणि तत्काळ काउंटर उपलब्धता व दर जाणून घ्या:',
     problemScreenTitle: 'स्क्रीन व टच डिस्प्ले',
-    problemScreenDesc: 'फुटलेली स्क्रीन, टच काम करत नाही, काळे डाग किंवा लाईन्स येणे.',
+    problemScreenDesc: 'तुटलेली काच, टच न चालणे, काळे डाग किंवा स्क्रीनवर रंगीत रेषा येणे.',
     problemScreenAction: 'डिस्प्ले स्टॉक तपासा →',
     problemBatteryTitle: 'बॅटरी बॅकअप व ड्रेन',
-    problemBatteryDesc: 'बॅटरी लवकर संपणे, २०% वर फोन बंद पडणे किंवा बॅटरी फुगणे.',
+    problemBatteryDesc: 'बॅटरी २ तासात संपणे, अचानक फोन बंद होणे किंवा बॅटरी फुगणे.',
     problemBatteryAction: 'बॅटरी स्टॉक तपासा →',
-    problemChargingTitle: 'चार्जिंग जॅक व पोर्ट',
-    problemChargingDesc: 'चार्जिंग केबल सैल बसणे, स्लो चार्जिंग, माईकचा आवाज न जाणे.',
+    problemChargingTitle: 'चार्जिंग पोर्ट व सब-बोर्ड',
+    problemChargingDesc: 'चार्जिंग केबल सैल बसणे, फास्ट चार्ज न होणे, कॉलमध्ये आवाज न जाणे.',
     problemChargingAction: 'पोर्ट दुरुस्ती दर विचारा →',
     problemWholesaleTitle: 'टेक्निशियन होलसेल',
-    problemWholesaleDesc: 'मोबाईल रिपेअरिंग दुकानांसाठी होलसेल बॉक्स फोल्डर्स व बॅटऱ्या.',
-    problemWholesaleAction: 'होलसेल भाव मिळवा →',
+    problemWholesaleDesc: 'मोबाईल रिपेअरिंग दुकानदारांसाठी बॉक्स फोल्डर्स व बॅटऱ्यांचे होलसेल दर.',
+    problemWholesaleAction: 'होलसेल दरपत्रक मिळवा →',
 
-    catalogBadge: 'हार्डवेअर कॅटलॉग',
-    catalogTitle: 'खास स्पेअर्स व अ‍ॅक्सेसरीज',
+    catalogBadge: 'हार्डवेअर इन्व्हेंटरी',
+    catalogTitle: 'प्रमुख स्पेअर पार्ट्स व दर्जेदार अॅक्सेसरीज',
     catalogSubtitle:
-      'शहादा काउंटरवर उपलब्ध असलेले दर्जेदार डिस्प्ले फोल्डर्स, बॅटऱ्या आणि फास्ट चार्जर्स.',
-    catAll: 'सर्व उत्पादने',
+      'शहादा काउंटरवर तत्काळ उपलब्ध असलेले टेस्टेड डिस्प्ले फोल्डर्स, जास्त बॅकअप देणाऱ्या बॅटऱ्या आणि फास्ट चार्जर्स.',
+    catAll: 'सर्व स्पेअर',
     catDisplays: 'डिस्प्ले फोल्डर्स',
     catBatteries: 'मोबाईल बॅटऱ्या',
     catChargers: 'फास्ट चार्जर्स',
-    catAccessories: 'केबल्स व कव्हर',
+    catAccessories: 'केबल्स व सब-बोर्ड',
+    catalogSearchPlaceholder: 'मॉडेल (उदा. Note 10, M31, iPhone), पार्ट नाव किंवा SKU शोधा...',
+    catalogSearchLabel: 'स्पेअर्स व अॅक्सेसरीज शोधा',
+    catalogAllBrands: 'सर्व ब्रँड',
+    catalogResultsCount: 'तपासलेले पार्ट उपलब्ध',
+    catalogNoResults: 'या शोध निकषांसाठी थेट पार्ट सापडला नाही.',
+    catalogRequestPartBtn: 'व्हॉट्सअ‍ॅपवर पार्टची चौकशी करा',
+    catalogClearSearch: 'शोध रद्द करा',
     compatibleModels: 'सपोर्टेड मॉडेल्स:',
-    specLabel: 'तपासलेले स्पेसिफिकेशन्स:',
-    enquirePriceBtn: 'व्हॉट्सअ‍ॅपवर किंमत विचारा',
+    specLabel: 'तपासलेली गुणवत्ता वैशिष्ट्ये:',
+    enquirePriceBtn: 'काउंटर दर विचारा',
 
-    repairBadge: 'रिपेअरिंग लॅब',
-    repairTitle: 'अचूक रिपेअरिंग व तपासणी प्रक्रिया',
+    estimatorBadge: 'झटपट दुरुस्ती खर्च गणक',
+    estimatorTitle: 'तुमच्या मोबाईलचा दुरुस्ती खर्च तपासा',
+    estimatorSubtitle:
+      'शहाद्यातील अचूक काउंटर दर आणि वेळेचा अंदाज मिळवण्यासाठी तुमचा मोबाईल ब्रँड, समस्या आणि पार्टची गुणवत्ता निवडा.',
+    estimatorStep1Brand: '१. मोबाईल ब्रँड निवडा',
+    estimatorStep2Issue: '२. काय समस्या किंवा पार्ट बदलावा लागेल?',
+    estimatorStep3Grade: '३. पार्टची गुणवत्ता ग्रेड निवडा',
+    estimatorEstimateTitle: 'वर्कशॉप दुरुस्ती अंदाज',
+    estimatorEstimatedRange: 'अंदाजित काउंटर किंमत मर्यादा',
+    estimatorTurnaroundLabel: 'लागणारा वेळ',
+    estimatorWarrantyLabel: 'वॉरंटी हमी',
+    estimatorPerk1: 'काउंटर तपासणीचे कोणतेही अतिरिक्त शुल्क नाही',
+    estimatorPerk2: 'डेटा सुरक्षितता हमी — फोटो आणि कॉन्टॅक्ट्स सुरक्षित राहतात',
+    estimatorPerk3: 'डिलिव्हरीपूर्वी १२-पॉइंट हार्डवेअर बेंच टेस्टिंग',
+    estimatorBookWhatsAppBtn: 'व्हॉट्सअ‍ॅपवर स्लॉट बुक करा',
+    estimatorCallCounterBtn: 'वर्कशॉप काउंटरला थेट कॉल करा',
+    estimatorDisclaimer:
+      '*अंतिम किंमत प्रत्यक्ष फोनची स्थिती आणि अचूक मॉडेल तपासल्यानंतर ठरवली जाते.',
+
+    issueScreen: 'डिस्प्ले व टच स्क्रीन (काच/स्क्रीन तुटली)',
+    issueBattery: 'बॅटरी लवकर संपते / फुगली आहे',
+    issueCharging: 'चार्जिंग सॉकेट / सब-बोर्ड / माईक',
+    issueWater: 'पाण्यात पडलेला फोन (अल्ट्रासॉनिक क्लीनिंग)',
+    issueCamera: 'कॅमेरा काच / बॅक ग्लास कव्हर',
+    issueBoard: 'डेड फोन / मदरबोर्ड शॉर्ट डायग्नोस्टिक',
+
+    gradeOriginal: 'OEM / ओरिजिनल सर्विस ग्रेड',
+    gradeOriginalDesc: 'ओरिजिनल आयसी, ट्रू कलर AMOLED/LCD, ९० दिवस थेट काउंटर रिप्लेसमेंट वॉरंटी.',
+    gradeDiamond: 'डायमंड टेस्टेड ग्रेड',
+    gradeDiamondDesc: 'बेंच-टेस्टेड उच्च दर्जाचा आफ्टरमार्केट पार्ट, ३० दिवस टेस्टिंग वॉरंटी.',
+
+    repairBadge: 'कम्पोनेंट लॅब',
+    repairTitle: 'अचूक डायग्नोस्टिक्स व डस्ट-फ्री फिटिंग',
     repairSubtitle:
-      'मायक्रो-सोल्डरिंग, ओरिजिनल गम फ्रेम फिटिंग आणि संपूर्ण तपासणीसह तत्पर सेवा.',
-    step1Title: '०१. सुरुवातीची तपासणी',
-    step1Desc: 'DC पॉवर सप्लाय व मल्टीमीटरने शॉर्ट सर्किट तपासणी केली जाते.',
+      'आम्ही मायक्रो-सोल्डरिंग, डस्ट-फ्री फ्रेम पेस्टिंग आणि पूर्ण टेस्टिंगद्वारे खात्रीशीर काम करतो.',
+    step1Title: '०१. प्राथमिक तपासणी',
+    step1Desc: 'DC पॉवर सप्लाय व डिजिटल मल्टीमीटरने नेमकी बिघाड शोधली जाते.',
     step2Title: '०२. अचूक फिटिंग',
-    step2Desc: 'फ्रेममधील धूळ साफ करून मूळ गमिंग आणि क्लॅम्प क्युरिंग केले जाते.',
+    step2Desc: 'फ्रेमची स्वच्छता करून ओरिजिनल सीलंट व क्लॅम्पद्वारे मजबूत फिटिंग.',
     step3Title: '०३. सेन्सर व टच टेस्ट',
-    step3Desc: 'मल्टी-टच स्मूथनेस, कॉलिंग सेन्सर व माईकची संपूर्ण खात्री केली जाते.',
-    step4Title: '०४. काउंटरवर खात्री',
-    step4Desc: 'ग्राहकांसमोर फोन चालू करून समाधान झाल्यानंतरच पेमेंट घेतले जाते.',
-    estTimeLabel: 'अंदाजे वेळ:',
-    enquireRepairBtn: 'रिपेअरिंगसाठी वेळ विचारा',
+    step3Desc: 'मल्टी-टच, कॉलिंग सेन्सर व मायक्रोफोनची लॅबमध्ये पूर्ण चाचणी.',
+    step4Title: '०४. काउंटर डिलिव्हरी',
+    step4Desc: 'ग्राहकासमोर फोन चालू करून पूर्ण समाधानानंतरच पेमेंट स्वीकारले जाते.',
+    estTimeLabel: 'सर्वसाधारण वेळ:',
+    enquireRepairBtn: 'माझ्या मॉडेलसाठी वेळ विचारा',
 
     wholesaleBadge: 'टेक्निशियन व वर्कशॉप डेस्क',
-    wholesaleTitle: 'मोबाईल रिपेअर शॉप्ससाठी होलसेल पुरवठा',
+    wholesaleTitle: 'स्थानिक रिपेअरिंग दुकानांसाठी होलसेल पुरवठा',
     wholesaleSubtitle:
-      'शहादा, तळोदा, शिरपूर, धडगाव आणि नंदुरबार येथील वर्कशॉप्ससाठी खात्रीशीर स्पेअर्स पुरवठादार.',
-    wholesaleAdvantage1: 'रिप्लेसमेंटचा त्रास कमी करण्यासाठी काउंटरवर प्री-टेस्ट केलेला माल.',
-    wholesaleAdvantage2: 'नियमित कारागिरांसाठी स्पेशल होलसेल डिस्काउंट दर.',
-    wholesaleAdvantage3: 'शहाद्यात काउंटर पिकअप आणि आसपासच्या तालुक्यांत बस-पार्सल पाठवण्याची सोय.',
-    wholesaleAdvantage4: 'स्टॉक व दरांची माहिती थेट व्हॉट्सअ‍ॅपवर तत्काळ उपलब्ध.',
-    wholesaleFormTitle: 'टेक्निशियन होलसेल रेट-कार्ड मिळवा',
-    fieldShopName: 'तुमच्या दुकानाचे / वर्कशॉपचे नाव',
-    fieldTown: 'तुमचे गाव / शहर (उदा. तळोदा, शिरपूर, धडगाव)',
-    fieldPartsNeeded: 'आवश्यक स्पेअर्स व प्रमाण (उदा. ५x नोट १० फोल्डर्स, ३x M31 बॅटऱ्या)',
-    btnSendWholesale: 'व्हॉट्सअ‍ॅपवर होलसेल मागणी पाठवा',
+      'शहादा, तलोदा, शिरपूर, धडगाव आणि नंदुरबार येथील वर्कशॉप्सना खात्रीशीर स्पेअर पार्ट्सचा पुरवठा.',
+    wholesaleAdvantage1: 'रिटर्नचा त्रास टाळण्यासाठी काउंटरवर आधीच तपासलेला स्टॉक.',
+    wholesaleAdvantage2: 'नियमित कारागीर व दुकानदारांसाठी विशेष होलसेल डिस्काउंट दर.',
+    wholesaleAdvantage3: 'शहाद्यात त्वरित काउंटर डिलिव्हरी आणि बस-पार्सल सुविधा.',
+    wholesaleAdvantage4: 'थेट आमच्या वर्कशॉप टेक्निशियनशी व्हॉट्सअ‍ॅपवर संपर्क.',
+    wholesaleFormTitle: 'टेक्निशियन होलसेल दरपत्रक मागवा',
+    fieldShopName: 'दुकान / वर्कशॉपचे नाव',
+    fieldTown: 'तुमचे गाव / शहर (उदा. तलोदा, शिरपूर)',
+    fieldPartsNeeded: 'लागणारे पार्ट व प्रमाण (उदा. ५x नोट १० फोल्डर, ३x M31 बॅटरी)',
+    btnSendWholesale: 'व्हॉट्सअ‍ॅपवर होलसेल चौकशी पाठवा',
 
-    locationBadge: 'दुकानाचा पत्ता',
-    locationTitle: 'शहादा येथील आमच्या काउंटरला भेट द्या',
+    locationBadge: 'काउंटर पत्ता',
+    locationTitle: 'शहादा येथील आमच्या दुकानाला भेट द्या',
     locationSubtitle:
-      'मार्केट यार्ड रोड, जुन्या बस स्टँडजवळ. स्वतः येऊन माल तपासा किंवा रिपेअरिंग सल्ला घ्या.',
+      'मार्केट यार्ड रोड, जुन्या बस स्टँडजवळ. स्वतः येऊन पार्ट्स तपासा किंवा रिपेअरिंग करून घ्या.',
     counterAddressHeading: 'दुकान व काउंटरचा पत्ता',
-    timingsHeading: 'काउंटरची वेळ',
-    openGoogleMapsBtn: 'गुगल मॅप्सवर रस्ता पाहा',
-    callCounterBtn: 'काउंटरवर थेट फोन करा',
+    timingsHeading: 'काउंटर उघडण्याची वेळ',
+    openGoogleMapsBtn: 'गुगल मॅप्सवर रस्ता पहा',
+    callCounterBtn: 'काउंटरला थेट कॉल करा',
 
     footerNotice:
-      'सूचना: रवी मोबाईल हे थेट चौकशी व काउंटर विक्री केंद्र आहे. सर्व दर आणि शिल्लक माल व्हॉट्सअ‍ॅपवर किंवा थेट दुकानात निश्चित केले जातात. या वेबसाईटवर कोणतेही ऑनलाईन पेमेंट घेतले जात नाही.',
+      'सूचना: रवी मोबाईल हे थेट चौकशीवर चालणारे काउंटर आहे. सर्व दर व उपलब्धता थेट व्हॉट्सअ‍ॅप किंवा दुकानातच निश्चित केली जाते. या वेबसाईटवर कोणतेही ऑनलाइन पेमेंट घेतले जात नाही.',
     footerRights: 'रवी मोबाईल (शहादा). सर्व हक्क राखीव.',
-    footerTowns: 'प्रादेशिक पुरवठा: शहादा • तळोदा • धडगाव • शिरपूर • नंदुरबार',
+    footerTowns: 'स्थानिक पुरवठा: शहादा • तलोदा • धडगाव • शिरपूर • नंदुरबार',
 
     mobileCall: '📞 काउंटरला फोन करा',
     mobileWhatsApp: '💬 व्हॉट्सअ‍ॅप करा',
@@ -349,9 +464,47 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
     catBatteries: 'मोबाइल बैटरियां',
     catChargers: 'फास्ट चार्जर',
     catAccessories: 'केबल्स व कवर',
+    catalogSearchPlaceholder: 'मॉडल (जैसे Note 10, M31, iPhone), पार्ट नाम या SKU खोजें...',
+    catalogSearchLabel: 'स्पेयर एवं एक्सेसरीज खोजें',
+    catalogAllBrands: 'सभी ब्रांड्स',
+    catalogResultsCount: 'सत्यापित पार्ट उपलब्ध',
+    catalogNoResults: 'इस खोज के लिए सीधा पार्ट कैटलॉग में नहीं मिला।',
+    catalogRequestPartBtn: 'व्हाट्सएप पर पार्ट की उपलब्धता पूछें',
+    catalogClearSearch: 'सर्च साफ करें',
     compatibleModels: 'सपोर्टेड मॉडल:',
     specLabel: 'जांची गई खूबियां:',
     enquirePriceBtn: 'व्हाट्सअ‍ॅप पर रेट पूछें',
+
+    estimatorBadge: 'त्वरित रिपेयर खर्च कैलकुलेटर',
+    estimatorTitle: 'अपने मोबाइल का रिपेयर खर्च जानें',
+    estimatorSubtitle:
+      'शहादा काउंटर पर सही कीमत और समय का अनुमान पाने के लिए अपना ब्रांड, समस्या और पार्ट की क्वालिटी चुनें।',
+    estimatorStep1Brand: '१. मोबाइल ब्रांड चुनें',
+    estimatorStep2Issue: '२. समस्या या खराब पार्ट चुनें',
+    estimatorStep3Grade: '३. पार्ट की क्वालिटी ग्रेड चुनें',
+    estimatorEstimateTitle: 'वर्कशॉप रिपेयर एस्टीमेट',
+    estimatorEstimatedRange: 'अनुमानित काउंटर रेट',
+    estimatorTurnaroundLabel: 'लगने वाला समय',
+    estimatorWarrantyLabel: 'वारंटी सुविधा',
+    estimatorPerk1: 'काउंटर डायग्नोस्टिक जांच का कोई शुल्क नहीं',
+    estimatorPerk2: 'डेटा सुरक्षा गारंटी — फोटो व कॉन्टैक्ट्स बिल्कुल सुरक्षित',
+    estimatorPerk3: 'डिलीवरी से पहले 12-पॉइंट बेंच टेस्टिंग',
+    estimatorBookWhatsAppBtn: 'व्हाट्सएप पर स्लॉट बुक करें',
+    estimatorCallCounterBtn: 'वर्कशॉप काउंटर पर कॉल करें',
+    estimatorDisclaimer:
+      '*अंतिम रेट फोन की वास्तविक स्थिति और सही मॉडल की जांच के बाद तय होता है।',
+
+    issueScreen: 'डिस्प्ले व टच स्क्रीन (कांच/स्क्रीन टूटा)',
+    issueBattery: 'बैटरी जल्दी खत्म होना / फूल जाना',
+    issueCharging: 'चार्जिंग जैक / सब-बोर्ड / माइक',
+    issueWater: 'पानी में गिरा फोन (अल्ट्रासॉनिक क्लीनिंग)',
+    issueCamera: 'कैमरा ग्लास / बैक ग्लास हाउसिंग',
+    issueBoard: 'डेड फोन / मदरबोर्ड शॉर्ट डायग्नोस्टिक्स',
+
+    gradeOriginal: 'OEM / ओरिजिनल सर्विस ग्रेड',
+    gradeOriginalDesc: 'ओरिजिनल आईसी, ट्रू कलर डिस्प्ले, 90 दिन डायरेक्ट काउंटर वारंटी।',
+    gradeDiamond: 'डायमंड टेस्टेड ग्रेड',
+    gradeDiamondDesc: 'बेंच-टेस्टेड हाई-क्वालिटी पार्ट, बजट-फ्रेंडली 30 दिन टेस्टिंग वारंटी।',
 
     repairBadge: 'कम्पोनेंट लैब',
     repairTitle: 'सटीक रिपेयरिंग व जांच प्रक्रिया',
