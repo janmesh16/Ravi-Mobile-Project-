@@ -9,6 +9,7 @@ import { WholesaleDesk } from './components/WholesaleDesk';
 import { LocationCard } from './components/LocationCard';
 import { Footer } from './components/Footer';
 import { MobileDock } from './components/MobileDock';
+import { EnquiryModal, type ModalContextItem } from './components/EnquiryModal';
 import './App.css';
 
 export default function App() {
@@ -20,6 +21,23 @@ export default function App() {
     }
     return 'en';
   });
+
+  // Interactive Enquiry Modal State
+  const [modalState, setModalState] = useState<{
+    isOpen: boolean;
+    contextItem: ModalContextItem | null;
+  }>({
+    isOpen: false,
+    contextItem: null,
+  });
+
+  const handleOpenModal = (item: ModalContextItem | null = null) => {
+    setModalState({ isOpen: true, contextItem: item });
+  };
+
+  const handleCloseModal = () => {
+    setModalState({ isOpen: false, contextItem: null });
+  };
 
   const handleLanguageChange = (lang: Language) => {
     setCurrentLang(lang);
@@ -36,7 +54,11 @@ export default function App() {
   return (
     <div className={`app-wrapper ${isDevanagari ? 'lang-devanagari' : ''}`}>
       {/* 1. Header with Brand, Shahada Focus & Language Switcher */}
-      <Header currentLang={currentLang} onLanguageChange={handleLanguageChange} />
+      <Header
+        currentLang={currentLang}
+        onLanguageChange={handleLanguageChange}
+        onOpenQuote={() => handleOpenModal({ title: 'Store Quotation & Parts Query' })}
+      />
 
       <main id="main-content">
         {/* 2. Hero Section — Alternative A (Precision Workshop Authority) */}
@@ -63,6 +85,14 @@ export default function App() {
 
       {/* 9. Mobile Persistent Thumb Dock (Call & WhatsApp) */}
       <MobileDock currentLang={currentLang} />
+
+      {/* 10. Interactive Accessible Enquiry Dialog */}
+      <EnquiryModal
+        isOpen={modalState.isOpen}
+        onClose={handleCloseModal}
+        contextItem={modalState.contextItem}
+        currentLang={currentLang}
+      />
     </div>
   );
 }

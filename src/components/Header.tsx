@@ -6,9 +6,10 @@ import { TRANSLATIONS } from '../i18n/translations';
 interface HeaderProps {
   currentLang: Language;
   onLanguageChange: (lang: Language) => void;
+  onOpenQuote?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange }) => {
+export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, onOpenQuote }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = TRANSLATIONS[currentLang];
 
@@ -86,6 +87,16 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange })
               हि
             </button>
           </div>
+
+          {onOpenQuote && (
+            <button
+              type="button"
+              className="btn btn-secondary btn-sm header-cta-desktop"
+              onClick={onOpenQuote}
+            >
+              <span>{currentLang === 'mr' ? 'कोटेशन मिळवा' : currentLang === 'hi' ? 'कोटेशन पाएं' : 'Get Quote'}</span>
+            </button>
+          )}
 
           {/* Desktop WhatsApp Action */}
           <a
